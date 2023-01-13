@@ -10,7 +10,7 @@ public class Main {
                 new Or(
                         new Constant(false), new Constant(true)
                 ),
-                new Not(new Constant(false))
+                new Not(new Constant(true))
         );
         System.out.println(expression + " = " + expression.evaluate());
     }
