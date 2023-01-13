@@ -15,7 +15,7 @@ public class File implements FileSystemItem {
 
     @Override
     public int getItemsAmount() {
-        return 1;
+        return 0;
     }
 
     @Override

@@ -14,7 +14,8 @@ public class Directory implements FileSystemItem {
 
     @Override
     public int getItemsAmount() {
-        return items.size();
+        return items.size() +
+                items.stream().map(FileSystemItem::getItemsAmount).reduce(0, Integer::sum);
     }
 
     @Override
