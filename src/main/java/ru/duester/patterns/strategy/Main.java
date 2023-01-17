@@ -5,14 +5,17 @@ import ru.duester.patterns.strategy.model.HighlightedText;
 import ru.duester.patterns.strategy.model.Paragraph;
 import ru.duester.patterns.strategy.model.Table;
 import ru.duester.patterns.strategy.output.Html;
-import ru.duester.patterns.strategy.output.Markdown;
 import ru.duester.patterns.strategy.output.OutputFormat;
 import ru.duester.patterns.strategy.output.PlainText;
 
 public class Main {
     public static void main(String[] args) {
         Document document = createDocument();
-        OutputFormat format = new Html();
+        OutputFormat format = new PlainText();
+        output(format, document);
+    }
+
+    private static void output(OutputFormat format, Document document) {
         String output = format.output(document);
         System.out.println(output);
     }
